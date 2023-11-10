@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/KirameneSalen/freddy-bot#readme",
   "dependencies": {
-    "discord.js": "^14.13.0"
+    "discord.js": "^14.13.0",
+    "dotenv": "^16.3.1"
   }
 }
