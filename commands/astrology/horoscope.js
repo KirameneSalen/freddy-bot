@@ -77,13 +77,13 @@ module.exports = {
             .setColor(0x0099FF)
             .setTitle(`${zodie.toUpperCase()}`)
             .setURL('https://www.horoscop.ro/')
-            .setAuthor({ name: 'Freddy Bot de horoscop in limba romana', iconURL: 'https://static-cdn.jtvnw.net/jtv_user_pictures/66322584-b6e9-45f1-a2e8-d3f5cffa4fb2-profile_image-300x300.png', url: 'https://discord.gg/nxDfJshy8M' })
+            .setAuthor({ name: 'Neti iti da horoscopul in limba romana', iconURL: 'https://cdn.britannica.com/45/104045-050-116C1F93/Signs-of-the-Zodiac-astrology.jpg' })
             .setThumbnail(`https://www.horoscope.com/images-US/signs/profile-${horoscope_translate[zodie]}.jpg`)
             .addFields(
                 { name: `Horoscopul tau pentru ${zi === 'TODAY' ? 'azi' : (zi === 'YESTERDA Y' ? 'ieri' : 'maine')}`, value: json.data }
             )
             .setTimestamp()
-            .setFooter({ text: 'made by Elwing', iconURL: 'https://static-cdn.jtvnw.net/jtv_user_pictures/66322584-b6e9-45f1-a2e8-d3f5cffa4fb2-profile_image-300x300.png' });
+            .setFooter({ text: 'creat de Elwing', iconURL: 'https://cdn.britannica.com/45/104045-050-116C1F93/Signs-of-the-Zodiac-astrology.jpg' });
         for (rating in json.ratings) {
             embed.addFields({ name: rating, value: writeHearts(json.ratings[rating]), inline: true })
         }
