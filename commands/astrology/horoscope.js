@@ -66,6 +66,9 @@ module.exports = {
                     { name: 'Maine', value: 'TOMORROW' },
                 )),
     async execute(interaction) {
+        // defer to fix issues with response longer than 3 seconds
+        await interaction.deferReply({ ephemeral: false });
+        
         // get data from horoscope API
         const zodie = interaction.options.getString('zodie');
         const zi = interaction.options.getString('zi');
@@ -89,7 +92,6 @@ module.exports = {
         }
 
         // send embeds
-        await interaction.deferReply({ ephemeral: false });
         await interaction.editReply({ embeds: [embed] });
     },
 };
