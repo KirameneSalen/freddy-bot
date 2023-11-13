@@ -89,6 +89,7 @@ module.exports = {
         }
 
         // send embeds
-        await interaction.reply({ embeds: [embed] });
+        await interaction.deferReply({ ephemeral: false });
+        await interaction.editReply({ embeds: [embed] });
     },
 };
